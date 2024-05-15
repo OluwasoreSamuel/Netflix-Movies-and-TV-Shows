@@ -44,19 +44,21 @@ bank_df = open_csv('C:/Users/pc/Downloads/Bank_information')
 
 
 
-def data_info(df):
+def data_shape(df):
     shape = df.shape
     print("The shape: {}".format(shape))
     check_null = df.isnull().sum()
     print("The total null data is :".format(check_null))
    
 
-netflix_infos = data_info(netflix_df)
+netflix_infos = data_shape(netflix_df)
 
 
+netflix_df.describe()
+netflix_df.info()
+netflix_df
 
 
-   
     
     
 
